@@ -24,10 +24,14 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
+      - name: Extract short SHA
+        id: vars
+        run: echo "SHORT_SHA=$(echo ${GITHUB_SHA} | cut -c1-6)" >> $GITHUB_OUTPUT
+
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: reaperberri/anylist-recipes-export:latest,reaperberri/anylist-recipes-export:${GITHUB_SHA::6}
+          tags: reaperberri/anylist-recipes-export:latest,reaperberri/anylist-recipes-export:${{ steps.vars.outputs.SHORT_SHA }}
