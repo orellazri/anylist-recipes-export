@@ -24,8 +24,8 @@ docker run --rm -e "ANYLIST_EMAIL=<email>" -e "ANYLIST_PASSWORD=<password>" -v .
 
 ```bash
 pnpm install
-
-# export environment variables
+export ANYLIST_EMAIL=<email>
+export ANYLIST_PASSWORD=<password>
 pnpm start
 ```
 
