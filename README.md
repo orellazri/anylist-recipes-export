@@ -17,7 +17,7 @@ Output format:
 ### Docker (Recommended)
 
 ```bash
-docker run --rm -e "ANYLIST_EMAIL=<email>" -e "ANYLIST_PASSOWRD=<password>" -v ./output:/app/output reaperberri/anylist-recipes-export
+docker run --rm -e "ANYLIST_EMAIL=<email>" -e "ANYLIST_PASSWORD=<password>" -v ./output:/app/output reaperberri/anylist-recipes-export
 ```
 
 ### Locally
