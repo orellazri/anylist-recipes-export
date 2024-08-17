@@ -1,0 +1,10 @@
+version: "3"
+tasks:
+  default:
+    cmds:
+      - task: run
+
+  run:
+    dotenv: [.env]
+    cmds:
+      - pnpm run start
