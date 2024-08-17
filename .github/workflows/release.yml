@@ -30,4 +30,4 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: reaperberri/${GITHUB_REPOSITORY#*/}:latest,reaperberri/${GITHUB_REPOSITORY#*/}:${GITHUB_SHA::6}
+          tags: reaperberri/anylist-recipes-export:latest,reaperberri/anylist-recipes-export:${GITHUB_SHA::6}
